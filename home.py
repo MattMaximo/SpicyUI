@@ -9,9 +9,9 @@ st.title('Dune Query Interface')
 
 # Input fields
 api_key = st.text_input('Enter your Dune API Key', type='password')
-query = st.text_input('Enter Dune Query ID, URL, or SQL')
+query = st.text_input('Enter Dune Query ID')
 params = st.text_area('Optional Parameters (e.g., {"network": "ethereum"})', '{}')
-refresh = st.checkbox('Refresh', value=False)
+refresh = st.checkbox('Refresh (leaving unchecked will use cached results)', value=False)
 
 # Function to extract query ID from URL or use the direct ID
 def extract_query_id(query_input):
